@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <!-- include style.css -->
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Tip calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  </head>
+  <body>
+    <div class="container">
+      <div>
+        <img src="./images/logo.svg" alt="logo" />
+        </div>
+      <div class="card">
+        <div class="calc">
+
+          <div class="calc-left">
+
+            <div class="bill">
+            <h2>Bill</h2>
+            <input type="number" id="bill-input" placeholder=0 />
+          </div>
+
+          <div class="tip-percentage">
+            <h2>Select Tip %</h2> 
+            <div class="tip-options" id="tip-perc" onchange=getTipInput(event) onclick=getTipInput(event)>
+              <button class="tip-btn tip-value" value="5" >5%</button>
+              <button class="tip-btn tip-value" value="10" >10%</button>
+              <button class="tip-btn tip-value" value="15" >15%</button>
+              <button class="tip-btn tip-value" value="25" >25%</button>
+              <button class="tip-btn tip-value" value="50" >50%</button>
+              <input class="tip-btn tip-value" type="number" name="custom-tip" id="custom-tip" placeholder="Custom" >
+            </div>
+          </div>
+
+          <div class="no-of-people" id="no-of-people">
+            <h2>Number of People</h2> 
+            <input type="number" id="no-of-people-val" placeholder=0 />
+          </div>
+           
+        </div>
+
+        <div class="calc-right">
+
+          <div class="total-amount-container">
+            <div class="total-cls  total-tip-amount">
+              <h2>Tip Amount
+                <br/>
+                <p>/person</p>
+              </h2>             
+              <h4 class="amount-result" id="total-tip-amount-person">$0.0</h4>
+            </div>
+  
+            <div class="total-cls total-amount">
+              <h2>Total
+                <br/>
+                <p>/person</p>
+              </h2>             
+              <h4 class="amount-result" id="total-amount-person">$0.0</h4>
+            </div>
+          </div>
+          
+          
+           
+          
+          <button class="reset-btn" onclick=reset()>Reset</button>
+
+        </div>
+
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Shreehari</a>.
+    </div>
+    <!-- inclde app.js -->
+    <script src="app.js"></script>
+  </body>
+</html>

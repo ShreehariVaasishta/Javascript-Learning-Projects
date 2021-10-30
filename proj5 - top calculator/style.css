@@ -1,0 +1,186 @@
+@import url("https://fonts.google.com/specimen/Space+Mono");
+
+body {
+  background-color: hsl(186, 68%, 85%);
+  width: 100vw;
+  height: 100vh;
+}
+
+* {
+  font-family: "Space Mono", monospace;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.card {
+  background-color: hsl(0, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 400px;
+  width: 650px;
+  border-radius: 30px;
+  font-size: 1.5rem;
+}
+
+.calc {
+  display: flex;
+  flex-direction: row;
+}
+
+.calc-right {
+  background-color: hsl(183, 100%, 15%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 60%;
+  height: 90%;
+  border-radius: 20px;
+  padding: 1rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+.calc-left {
+  width: 50%;
+  padding: 0rem 0rem 20px;
+}
+
+input {
+  background-color: hsl(189, 41%, 97%);
+  border-color: transparent;
+  border-radius: 5px;
+  margin: 0px;
+  text-align: right;
+  font-family: inherit;
+  font-size: 1.5rem;
+  color: hsl(185, 24%, 50%);
+}
+input[type="number"]:focus-visible {
+  outline-color: var(--cyan-strong);
+}
+
+/* Remove arrow from input field */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.bill {
+  padding: 5% 5% 0;
+}
+
+h2 {
+  font-size: 15px;
+  margin-bottom: 0;
+  color: hsl(186, 14%, 43%);
+}
+
+input {
+  background-image: url("./images/icon-dollar.svg");
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  margin-right: 2px;
+  max-width: 95%;
+}
+
+.tip-percentage {
+  padding: 5% 5% 5% 5%;
+  transition: all 0.8s ease;
+}
+
+.tip-btn {
+  width: 25%;
+  /* add space-between */
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  background-color: hsl(183, 100%, 15%);
+  border: none;
+  border-radius: 5px;
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+}
+
+/* create a css to create button with input whose id is custom-tip */
+.tip-percentage #custom-tip {
+  background-image: none;
+  background-color: hsl(189, 41%, 97%);
+  color: hsl(185, 24%, 50%);
+  width: 30%;
+}
+
+.tip-btn:hover {
+  background-color: hsl(180, 85%, 82%);
+  color: hsl(185, 24%, 50%);
+}
+
+.tip-btn:focus {
+  background-color: hsl(183, 100%, 30%);
+}
+
+.no-of-people {
+  padding: 5% 5% 0;
+}
+
+.no-of-people input {
+  background-image: url("./images/icon-person.svg");
+}
+
+.total-amount-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.total-cls {
+  font-weight: 700;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.calc-right h2 {
+  font-size: 1.5rem;
+  color: hsl(0, 0%, 100%);
+}
+
+.calc-right p {
+  font-size: 10px;
+  color: hsl(185, 41%, 84%);
+}
+
+.calc-right .amount-result {
+  font-weight: 700;
+  color: hsl(184, 14%, 56%);
+}
+
+.calc-right h3 {
+  max-width: inherit;
+  text-overflow: ellipsis;
+  line-height: 3;
+}
+
+.reset-btn {
+  border-radius: 5px;
+  border: none;
+  background-color: hsl(185, 41%, 84%);
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.reset-btn:hover {
+  background-color: hsl(186, 50%, 75%);
+}
