@@ -93,6 +93,7 @@ input {
   background-position: 10px center;
   margin-right: 2px;
   max-width: 95%;
+  /* z-index: 1; */
 }
 
 .tip-percentage {

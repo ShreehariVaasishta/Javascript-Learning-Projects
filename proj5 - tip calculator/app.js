@@ -6,9 +6,12 @@ var total_tip_amount_person = document.getElementById(
 );
 var tip_percent;
 
+function stringSlicify(text, length = 5) {
+  return text.length > length ? `${text.slice(0, length)}...` : text;
+}
+
 function calculate_total_amount_per_person() {
   //   total_tip_amount_person.innerText = 123;
-  console.clear();
 
   if (typeof bill === "undefined") {
     bill_amt = 0;
@@ -18,7 +21,6 @@ function calculate_total_amount_per_person() {
   if (typeof no_of_people === "undefined") {
     no_of_people_amt = 0;
   } else {
-    console.log(no_of_people.value, "<no_of_people");
     no_of_people_amt = parseInt(no_of_people.value);
   }
   if (typeof tip_percent === "undefined") {
@@ -28,19 +30,16 @@ function calculate_total_amount_per_person() {
   }
 
   var tip_amount = bill_amt * (tip_percent_amt / 100);
-  console.log(tip_percent_amt, "<<tip_percent_amt");
-  console.log(bill_amt, "<<bill_amt");
-  console.log(no_of_people, "<<no_of_people");
 
   var total_amount_per_person = (bill_amt + tip_percent_amt) / no_of_people_amt;
 
   total_amount_person.innerText =
-    "$" + (total_amount_per_person ? total_amount_per_person : 0).toString();
+    "$" +
+    stringSlicify(
+      (total_amount_per_person ? total_amount_per_person : 0).toFixed(2)
+    );
   total_tip_amount_person.innerText =
-    "$" + (tip_amount ? tip_amount : 0).toString();
-
-  console.log("total_amount_person>>", total_amount_person.innerText);
-  console.log("total_tip_amount_person>>>>", total_tip_amount_person.innerText);
+    "$" + stringSlicify((tip_amount ? tip_amount : 0).toFixed(2));
 }
 
 bill.addEventListener("change", function () {
